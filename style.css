@@ -1,8 +1,11 @@
+
 body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+
+
   /* font-family: 'Source Code Pro', monospace; */
 
 
@@ -28,11 +31,17 @@ canvas {
 
 .navbar {
   background-color: #2e2e2e !important;
+  box-sizing: border-box;
 }
+
+
+
 
 .navbar li:hover {
   font-weight: 900;
   border-bottom: 1px solid yellow;
+  
+  
 }
 
 
@@ -49,11 +58,13 @@ canvas {
 }
 
 #about {
+  font-family: 'Raleway', sans-serif;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 
 }
 
@@ -93,7 +104,7 @@ canvas {
 }
 
 #icons ul li a:hover {
-  color: rgba(255, 188, 7, 0.8);
+  color: #ffbc07cc;
 }
 
 
@@ -365,4 +376,79 @@ canvas {
 #sidehair2 {
   left: 250px;
   transform: rotate(340deg);
+}
+
+.hover_animation>div {
+  transition: border 1s, transform 1s;
+}
+
+.hover_animation>div:hover {
+  border: 1px solid white;
+  transform: scale(1.1, 1.1);
+}
+
+.hover_animation2>div {
+  transition: border 1s, transform 1s;
+}
+
+.hover_animation2>div:hover {
+
+  transform: scale(1.1, 1.1);
+}
+
+
+
+/* rubber band effect */
+
+.container_rubber {
+  position: relative;
+}
+
+.rubber_band {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 40px;
+
+}
+
+
+
+.rubber_band.elastic {
+  color: #FFBC07;
+  animation-name: rubberband 1s;
+  -moz-animation: rubberband 1s;
+  -webkit-animation: rubberband 1s;
+  animation: rubberband 1s;
+}
+
+
+@keyframes rubberband {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
